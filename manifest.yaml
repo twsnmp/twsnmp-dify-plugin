@@ -1,0 +1,39 @@
+version: 0.0.1
+type: plugin
+author: twsnmp
+name: twsnmp
+label:
+  en_US: twsnmp
+  ja_JP: twsnmp
+description:
+  en_US: Dify plugin for TWSNMP FC.
+  ja_JP: TWSNMP FCのためのDifyプラグイン.
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/twsnmp.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-07-05T09:28:26.549221+09:00
+privacy: PRIVACY.md
+verified: false

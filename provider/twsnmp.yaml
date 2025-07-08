@@ -1,0 +1,49 @@
+identity:
+  author: "twsnmp"
+  name: "twsnmp"
+  label:
+    en_US: "twsnmp"
+    ja_JP: "twsnmp"
+  description:
+    en_US: "Dify plugin for TWSNMP FC."
+    ja_JP: "TWSNMP FCのためのDifyプラグイン"
+  icon: "icon.svg"
+tools:
+  - tools/get_node_list.yaml
+extra:
+  python:
+    source: provider/twsnmp.py
+
+credentials_for_provider:
+    twsnmp_url:
+        type: text-input
+        required: true
+        label:
+            en_US: TWSNMP FC URL
+            ja_JP: TWSNMP FCのURL
+        placeholder:
+            en_US: Enter TWSNMP FC URL
+            ja_JP: TWSNMP FCのURLを設定してください
+        help:
+            en_US: About TWSNMP
+            ja_JP: TWSNMP FCについて
+            url: https://note.com/twsnmp/m/meed0d0ddab5e
+    twsnmp_user:
+        type: text-input
+        required: true
+        label:
+            en_US: TWSNMP FC User
+            ja_JP: ユーザーID
+        placeholder:
+            en_US: Enter User
+            ja_JP: TWSNMP FCのユーザーIDを設定してください
+    twsnmp_password:
+        type: secret-input
+        required: true
+        label:
+            en_US: TWSNMP FC Password
+            ja_JP: パスワード
+        placeholder: # 入力フィールドのプレースホルダーテキスト (多言語対応)
+            en_US: Enter your Telegraph access token
+            ja_JP: パスワードを入力してください。
+ 
