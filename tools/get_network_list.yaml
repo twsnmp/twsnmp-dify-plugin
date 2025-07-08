@@ -1,13 +1,13 @@
 identity:
-  name: "get_node_list"
+  name: "get_network_list"
   author: "twsnmp"
   label:
-    en_US: "get_node_list"
+    en_US: "get_network_list"
 description:
   human:
-    en_US: "Get node list from TWSNP FC"
-    ja_JP: "TWSNMP FCからノードリストを取得する"
-  llm: "Get node list from TWSNMP FC."
+    en_US: "Get network list from TWSNP FC"
+    ja_JP: "TWSNMP FCからネットワークリストを取得する"
+  llm: "Get network list from TWSNMP FC."
 parameters:
   - name: name_filter
     type: string
@@ -29,16 +29,6 @@ parameters:
       ja_JP: "IPフィルター"
     llm_description: "IP filter"
     form: llm
-  - name: state_filter
-    type: string
-    label:
-      en_US: State filter
-      ja_JP: 状態フィルター
-    human_description:
-      en_US: "State filter"
-      ja_JP: "状態フィルター"
-    llm_description: "State filter(high,low,warn,normal,info,repair or unknown)"
-    form: llm
 extra:
   python:
-    source: tools/get_node_list.py
+    source: tools/get_network_list.py
