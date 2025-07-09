@@ -77,7 +77,6 @@ class GetPollingListTool(Tool):
         
         # 4. 結果を返す
         for polling  in pollings:
-            logger.info(polling)
             if name and name not in polling.get("Name",""):
                 continue
             if type and type not in polling.get("Type",""):

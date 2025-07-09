@@ -1,0 +1,45 @@
+identity:
+  name: "do_ping"
+  author: "twsnmp"
+  label:
+    en_US: "do_ping"
+description:
+  human:
+    en_US: "Execute ping  from TWSNP FC"
+    ja_JP: "TWSNMP FCからPINGを実行する"
+  llm: "Execute ping from TWSNMP FC."
+parameters:
+  - name: target_ip
+    type: string
+    required: true
+    label:
+      en_US: Target IP
+      ja_JP: 対象IPアドレス
+    human_description:
+      en_US: "Target IP address"
+      ja_JP: "対象IPアドレス"
+    llm_description: "Target IP address"
+    form: llm
+  - name: size
+    type: number
+    label:
+      en_US: Size
+      ja_JP: サイズ
+    human_description:
+      en_US: "Packet size of ping"
+      ja_JP: "PINGのパケットサイズ"
+    llm_description: "Packet size of ping"
+    form: llm
+  - name: ttl
+    type: number
+    label:
+      en_US: TTL
+      ja_JP: TTL
+    human_description:
+      en_US: "TTL of ping packet"
+      ja_JP: "PINGパケットのTTL"
+    llm_description: "TTL of ping packet"
+    form: llm
+extra:
+  python:
+    source: tools/do_ping.py

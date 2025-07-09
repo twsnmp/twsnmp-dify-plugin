@@ -31,3 +31,23 @@ def nanosecond_unix_to_datetime_string(nanosecond_timestamp, format_string="%Y-%
     # 必要に応じて、ナノ秒を別の方法で文字列に付加することも検討できます。
     return dt_object.strftime(format_string)
 
+def unix_to_datetime_string(timestamp, format_string="%Y-%m-%d %H:%M:%S"):
+    """
+    UNIXタイムスタンプを文字列の日時に変換します。
+
+    Args:
+        timestamp (int): UNIXタイムスタンプ。
+        format_string (str): 出力する日時のフォーマット文字列。
+
+    Returns:
+        str: フォーマットされた日時文字列。
+    """
+    if not timestamp:
+        return ""
+  
+    # datetimeオブジェクトを作成
+    dt_object = datetime.datetime.fromtimestamp(timestamp)
+  
+    # フォーマットして文字列として返す
+    return dt_object.strftime(format_string)
+
