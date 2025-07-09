@@ -15,7 +15,7 @@ logger.setLevel(logging.INFO)
 logger.addHandler(plugin_logger_handler)
 
 
-from twsnmpapi.twsnmpapi import TwsnmpAPI
+from twlib.twsnmpapi import TwsnmpAPI
 
 class GetPollingListTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
