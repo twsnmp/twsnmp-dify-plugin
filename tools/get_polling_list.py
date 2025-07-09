@@ -16,6 +16,7 @@ logger.addHandler(plugin_logger_handler)
 
 
 from twlib.twsnmpapi import TwsnmpAPI
+from twlib.time_util import nanosecond_unix_to_datetime_string
 
 class GetPollingListTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
@@ -76,6 +77,7 @@ class GetPollingListTool(Tool):
         
         # 4. 結果を返す
         for polling  in pollings:
+            logger.info(polling)
             if name and name not in polling.get("Name",""):
                 continue
             if type and type not in polling.get("Type",""):
@@ -94,6 +96,8 @@ class GetPollingListTool(Tool):
                 if node_name_filter not in node_name:
                     continue
             polling["NodeName"] = node_name
+            polling["LastTime"] = nanosecond_unix_to_datetime_string(polling.get("LastTime",0))
+            polling["NextTime"] = nanosecond_unix_to_datetime_string(polling.get("NextTime",0))
             yield self.create_json_message(polling)
         logger.info("end get_polling_list")
  

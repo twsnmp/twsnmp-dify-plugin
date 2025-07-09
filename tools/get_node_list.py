@@ -66,6 +66,10 @@ class GetNodeListTool(Tool):
                 continue
             if state and state not in node.get("State",""):
                 continue
+            del node["Password"]
+            del node["GNMIPassword"]
+            del node["Community"]
+            logger.info(node)
             yield self.create_json_message(node)
         logger.info("end get_node_list")
  

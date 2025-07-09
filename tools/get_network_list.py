@@ -66,6 +66,9 @@ class GetNetworkListTool(Tool):
                 continue
             if ip and ip not in network.get("IP",""):
                 continue
+            del network["Password"]
+            del network["Community"]
+            logger.info(network)
             yield self.create_json_message(network)
         logger.info("end get_network_list")
  
