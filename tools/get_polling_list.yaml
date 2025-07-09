@@ -1,0 +1,54 @@
+identity:
+  name: "get_polling_list"
+  author: "twsnmp"
+  label:
+    en_US: "get_polling_list"
+description:
+  human:
+    en_US: "Get polling list from TWSNP FC"
+    ja_JP: "TWSNMP FCからポーリングリストを取得する"
+  llm: "Get polling list from TWSNMP FC."
+parameters:
+  - name: type_filter
+    type: string
+    label:
+      en_US: Type filter
+      ja_JP: 種別フィルター
+    human_description:
+      en_US: "Polling type filter"
+      ja_JP: "ポーリング種別フィルター"
+    llm_description: "Polling type filter"
+    form: llm
+  - name: name_filter
+    type: string
+    label:
+      en_US: Name filter
+      ja_JP: 名前フィルター
+    human_description:
+      en_US: "Name filter"
+      ja_JP: "名前フィルター"
+    llm_description: "Name filter"
+    form: llm
+  - name: node_name_filter
+    type: string
+    label:
+      en_US: Node name filter
+      ja_JP: ノード名フィルター
+    human_description:
+      en_US: "Node name filter"
+      ja_JP: "ノード名フィルター"
+    llm_description: "Node name filter"
+    form: llm
+  - name: state_filter
+    type: string
+    label:
+      en_US: State filter
+      ja_JP: 状態フィルター
+    human_description:
+      en_US: "State filter"
+      ja_JP: "状態フィルター"
+    llm_description: "State filter(high,low,warn,normal,info,repair or unknown)"
+    form: llm
+extra:
+  python:
+    source: tools/get_polling_list.py

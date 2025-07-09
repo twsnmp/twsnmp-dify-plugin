@@ -11,6 +11,7 @@ identity:
 tools:
   - tools/get_node_list.yaml
   - tools/get_network_list.yaml
+  - tools/get_polling_list.yaml
 extra:
   python:
     source: provider/twsnmp.py
