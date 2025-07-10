@@ -1,0 +1,13 @@
+identity:
+  name: "get_wifi_ap_list"
+  author: "twsnmp"
+  label:
+    en_US: "get_wifi_ap_list"
+description:
+  human:
+    en_US: "Get Wifi access point list from TWSNP FC"
+    ja_JP: "TWSNMP FCからWifiのアクセスポイントのリストを取得する"
+  llm: "Get Wifi access point list list from TWSNMP FC."
+extra:
+  python:
+    source: tools/get_wifi_ap_list.py

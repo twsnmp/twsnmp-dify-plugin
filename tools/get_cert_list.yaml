@@ -1,0 +1,13 @@
+identity:
+  name: "get_cert_list"
+  author: "twsnmp"
+  label:
+    en_US: "get_cert_list"
+description:
+  human:
+    en_US: "Get server certificate list from TWSNP FC"
+    ja_JP: "TWSNMP FCからサーバー証明書のリストを取得する"
+  llm: "Get server certificate  list from TWSNMP FC."
+extra:
+  python:
+    source: tools/get_cert_list.py

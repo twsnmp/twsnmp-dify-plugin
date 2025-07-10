@@ -17,6 +17,8 @@ tools:
   - tools/get_mac_address_list.yaml
   - tools/get_ip_address_list.yaml
   - tools/get_sensor_list.yaml
+  - tools/get_cert_list.yaml
+  - tools/get_wifi_ap_list.yaml
 extra:
   python:
     source: provider/twsnmp.py
