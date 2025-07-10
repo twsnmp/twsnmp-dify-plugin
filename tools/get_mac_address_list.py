@@ -18,7 +18,7 @@ logger.addHandler(plugin_logger_handler)
 from twlib.twsnmpapi import TwsnmpAPI
 from twlib.time_util import nanosecond_unix_to_datetime_string
 
-class GetNodeListTool(Tool):
+class GetMACAddressListTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         """
         TWSNMP FCからLAN上デバイスのリストを取得してJSONで返す。
@@ -32,7 +32,7 @@ class GetNodeListTool(Tool):
         Yields:
             ToolInvokeMessage: JSON
         """
-        logger.info("start get_lan_device_list")
+        logger.info("start get_mac_address_list")
         # 1. ランタイムから認証情報を取得
         try:
             url = self.runtime.credentials["twsnmp_url"]
@@ -47,7 +47,7 @@ class GetNodeListTool(Tool):
         ip = tool_parameters.get("ip_filter", "") 
         vendor = tool_parameters.get("vendor_filter", "") 
 
-        # 3. TWSNMP FCからノードリストを取得
+        # 3. TWSNMP FCからMAC addressリストを取得
         api = TwsnmpAPI(url)
         r = api.login(user,password)
         if r:
@@ -56,8 +56,8 @@ class GetNodeListTool(Tool):
           
         devices = api.get("/api/report/devices")
         if not devices:
-            logger.error("Failed to retrieve LAN device from TWSNMP FC")
-            yield self.create_text_message("Failed to retrieve LAN device from TWSNMP FC")
+            logger.error("Failed to retrieve MAC address from TWSNMP FC")
+            yield self.create_text_message("Failed to retrieve MAC address list from TWSNMP FC")
         
         # 4. 結果を返す
         for d  in devices:
@@ -74,5 +74,5 @@ class GetNodeListTool(Tool):
             del d["ID"]
             del d["ValidScore"]
             yield self.create_json_message(d)
-        logger.info("end get_lan_device_list")
+        logger.info("end get_mac_address_list")
  
