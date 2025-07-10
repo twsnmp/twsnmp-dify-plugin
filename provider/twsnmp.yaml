@@ -13,6 +13,7 @@ tools:
   - tools/get_network_list.yaml
   - tools/get_polling_list.yaml
   - tools/do_ping.yaml
+  - tools/snmpwalk.yaml
 extra:
   python:
     source: provider/twsnmp.py

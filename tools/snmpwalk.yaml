@@ -1,0 +1,35 @@
+identity:
+  name: "snmpwalk"
+  author: "twsnmp"
+  label:
+    en_US: "snmpwalk"
+description:
+  human:
+    en_US: "Execute snmpwalk  from TWSNP FC"
+    ja_JP: "TWSNMP FCからsnmpwalkを実行する"
+  llm: "Execute snmpwalk from TWSNMP FC."
+parameters:
+  - name: target
+    type: string
+    required: true
+    label:
+      en_US: Target Node
+      ja_JP: 対象ノード
+    human_description:
+      en_US: "Target node  name or IP address"
+      ja_JP: "対象ノードの名前かIP"
+    llm_description: "Target node name or IP address"
+    form: llm
+  - name: mib
+    type: string
+    label:
+      en_US: MIB object name 
+      ja_JP: MIBのオブジェクト名
+    human_description:
+      en_US: "MIB object name"
+      ja_JP: "MIBのオブジェクト名"
+    llm_description: "MIB object name"
+    form: llm
+extra:
+  python:
+    source: tools/snmpwalk.py

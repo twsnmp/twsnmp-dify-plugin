@@ -47,7 +47,7 @@ class DoPingTool(Tool):
         size = tool_parameters.get("size",64) 
         ttl = tool_parameters.get("ttl", 64) 
 
-        # 3. TWSNMP FCからノードリストを取得
+        # 3. TWSNMP FCでpingを実施
         api = TwsnmpAPI(url)
         r = api.login(user,password)
         if r:
