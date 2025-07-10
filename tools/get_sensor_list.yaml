@@ -1,0 +1,13 @@
+identity:
+  name: "get_sensor_list"
+  author: "twsnmp"
+  label:
+    en_US: "get_sensor_list"
+description:
+  human:
+    en_US: "Get sensor list from TWSNP FC"
+    ja_JP: "TWSNMP FCからセンサーリストを取得する"
+  llm: "Get sensor list list from TWSNMP FC."
+extra:
+  python:
+    source: tools/get_sensor_list.py
