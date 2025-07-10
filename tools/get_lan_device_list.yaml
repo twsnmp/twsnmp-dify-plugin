@@ -1,0 +1,45 @@
+identity:
+  name: "get_lan_device_list"
+  author: "twsnmp"
+  label:
+    en_US: "get_lan_device_list"
+description:
+  human:
+    en_US: "Get LAN device list from TWSNP FC"
+    ja_JP: "TWSNMP FCからLAN上デバイスリストを取得する"
+  llm: "Get LAN device list list from TWSNMP FC."
+parameters:
+  - name: name_filter
+    type: string
+    label:
+      en_US: Name filter
+      ja_JP: 名前フィルター
+    human_description:
+      en_US: "Name filter"
+      ja_JP: "名前フィルター"
+    llm_description: "Name filter"
+    form: llm
+  - name: ip_filter
+    type: string
+    label:
+      en_US: IP filter
+      ja_JP: IPフィルター
+    human_description:
+      en_US: "IP filter"
+      ja_JP: "IPフィルター"
+    llm_description: "IP filter"
+    form: llm
+  - name: vendor_filter
+    type: string
+    label:
+      en_US: Vendor filter
+      ja_JP: ベンダーフィルター
+    human_description:
+      en_US: "State filter"
+      ja_JP: "ベンダーフィルター"
+    llm_description: "Vendor filter"
+    form: llm
+
+extra:
+  python:
+    source: tools/get_lan_device_list.py

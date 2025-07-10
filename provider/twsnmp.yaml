@@ -14,6 +14,7 @@ tools:
   - tools/get_polling_list.yaml
   - tools/do_ping.yaml
   - tools/snmpwalk.yaml
+  - tools/get_lan_device_list.yaml
 extra:
   python:
     source: provider/twsnmp.py
