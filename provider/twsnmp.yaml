@@ -2,8 +2,8 @@ identity:
   author: "twsnmp"
   name: "twsnmp"
   label:
-    en_US: "twsnmp"
-    ja_JP: "twsnmp"
+    en_US: "TWSNMP"
+    ja_JP: "TWSNMP"
   description:
     en_US: "Dify plugin for TWSNMP FC."
     ja_JP: "TWSNMP FCのためのDifyプラグイン"
@@ -15,6 +15,7 @@ tools:
   - tools/do_ping.yaml
   - tools/snmpwalk.yaml
   - tools/get_mac_address_list.yaml
+  - tools/get_ip_address_list.yaml
 extra:
   python:
     source: provider/twsnmp.py
@@ -48,7 +49,7 @@ credentials_for_provider:
         label:
             en_US: TWSNMP FC Password
             ja_JP: パスワード
-        placeholder: # 入力フィールドのプレースホルダーテキスト (多言語対応)
-            en_US: Enter your Telegraph access token
-            ja_JP: パスワードを入力してください。
+        placeholder:
+            en_US: Enter password
+            ja_JP: パスワードを入力してください
  
