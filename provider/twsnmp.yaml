@@ -19,6 +19,7 @@ tools:
   - tools/get_sensor_list.yaml
   - tools/get_cert_list.yaml
   - tools/get_wifi_ap_list.yaml
+  - tools/get_env_sensor_list.yaml
 extra:
   python:
     source: provider/twsnmp.py
