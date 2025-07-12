@@ -1,46 +1,23 @@
-# twsnmp-dify-plugin プライバシーポリシー
+# Privacy Policy
 
-このプライバシーポリシーは、twsnmp-dify-plugin（以下「本プラグイン」）がどのようにユーザーの情報を収集、使用、開示するかを説明するものです。本プラグインを使用する前に、このプライバシーポリシーをよくお読みください。
+This tool is designed with privacy in mind and does not collect any user data. We are committed to maintaining your privacy and ensuring your data remains secure.
 
-## 1. 収集する情報
+## Data Collection
 
-本プラグインは、以下の種類の情報を収集する場合があります。
+- **No Personal Information**: We do not collect, store, or process any personal information.
+- **No Usage Data**: We do not track or monitor how you use the tool.
+- **No Analytics**: We do not implement any analytics or tracking mechanisms.
 
-ユーザーが提供する情報:
+## Third-Party Services
 
-本プラグインを利用する際にユーザーが入力するデータ（例：ノードの名前、IPアドレスなど）。これらの情報は、本プラグインの機能を提供するためにのみ使用されます。
+This tool does not integrate with or utilize any third-party services that might collect user data.
 
-ユーザー設定に関する情報(TWSNMPのURL,ユーザー名、パスワード)。
+## Changes to Privacy Policy
 
-自動的に収集される情報はありません。
+If there are any changes to our privacy practices, we will update this document accordingly.
 
+## Contact Us
 
-## 2. 情報の利用目的
-
-収集された情報は、本プラグインの主要機能を提供するために利用します。
-
-
-## 3. 情報の共有と開示
-
-本プラグリンは、ユーザーの個人情報を第三者と共有または開示しません。
-
-
-## 4. データの保存とセキュリティ
-
-本プラグインが収集するデータは、Dify内にのみ保存されます。
-
-
-## 5. ユーザーの選択と権利
-
-ユーザーはプラグインの削除、設定変更により本プラグインが収集する情報を削除、変更できます。
-
-
-6. プライバシーポリシーの変更
-
-本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、本プラグインの更新によってユーザーに通知します。変更後のプライバシーポリシーは、公開された時点から有効となります。
-
-7. お問い合わせ
-
-本プライバシーポリシーに関するご質問やご不明な点がございましたら、以下の連絡先までお問い合わせください。
+If you have any questions or concerns about this Privacy Policy, please contact us at
 
 twsnmp@gmail.com
